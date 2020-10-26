@@ -25,18 +25,19 @@
   flex-wrap: $wrap;
 }
 
-@mixin text($size, $weight: 400, $color: black) {
+@mixin text($size, $weight: 400, $color: black, $font-family) {
   font: {
     size: $size;
     weight: $weight;
   }
   color: $color;
+  font-family: $font-family;
   @content;
 }
 
-@mixin size($size, $round: false) {
-  width: $size;
-  height: $size;
+@mixin size($size-w, $size-h, $round: false) {
+  width: $size-w;
+  height: $size-h;
   flex-shrink: 0;
   @if $round {
     border-radius: 50%;
@@ -79,7 +80,7 @@ $z-index: (
   dropdown: 2,
   wrapper: 1,
   default: 0,
-  under: -1
+  under: -1,
 );
 
 @mixin padding-hack($padding: 50%, $size: contain, $dev: false) {
@@ -131,4 +132,10 @@ $screen-retina: 1660px;
   @media screen and (min-width: $screen) {
     @content;
   }
+}
+
+@mixin bg-image($url, $cover: cover, $n-rep: no-repeat) {
+  background-image: url(#{$url});
+  background-size: $cover ;
+  background-repeat: $n-rep;
 }
