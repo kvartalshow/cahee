@@ -72,7 +72,7 @@
     }
     &-block {
       @include size(24px, 40px);
-      border: 2px solid $fonts-color;
+      border: 3px solid $fonts-color;
       border-radius: 50px;
       position: relative;
       transition-property: height, scale;
@@ -80,12 +80,13 @@
       transition-timing-function: ease;
       &:before {
         content: "";
-        width: 2px;
+        width: 2.5px;
         height: 5px;
         background-color: $fonts-color;
         position: absolute;
         top: 4px;
-        left: 9px;
+        left: 7.5px;
+        border-radius: 20px;
         transition-property: height, top;
         transition-duration: 0.3s;
         transition-timing-function: ease;

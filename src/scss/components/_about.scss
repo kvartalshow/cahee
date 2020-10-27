@@ -1,0 +1,15 @@
+.about{
+    @include flex(center, center, row, nowrap);
+    padding: 36px 0px 10px;
+    padding-left: 11%;
+    padding-right: 11%;
+    background-color: $turquoise;
+    &__img{
+        @include size(100%,100%);
+    }
+    &__text{
+        &-title{
+            @include text($h90, 700, $white, $f-raleway);
+        }
+    }
+}
