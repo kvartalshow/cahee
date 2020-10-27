@@ -3,7 +3,7 @@
   @include flex(space-between, flex-start, column, nowrap);
   @include size(100%, 100vh);
   background-position: 50% 50%;
-  min-height: 550px;
+  min-height: 1000px;
   &__menu {
     @include size(100%, auto);
     @include flex(space-between, flex-start, row, nowrap);
@@ -51,6 +51,7 @@
       @include text($h17, 300, $fonts-color, $f-raleway);
       @include size(370px, auto);
       margin-bottom: 31px;
+      line-height: 27px;
     }
   }
   &__scroll {
@@ -72,7 +73,7 @@
     }
     &-block {
       @include size(24px, 40px);
-      border: 2px solid $fonts-color;
+      border: 3px solid $fonts-color;
       border-radius: 50px;
       position: relative;
       transition-property: height, scale;
@@ -80,12 +81,13 @@
       transition-timing-function: ease;
       &:before {
         content: "";
-        width: 2px;
+        width: 2.5px;
         height: 5px;
         background-color: $fonts-color;
         position: absolute;
         top: 4px;
-        left: 9px;
+        left: 7.5px;
+        border-radius: 20px;
         transition-property: height, top;
         transition-duration: 0.3s;
         transition-timing-function: ease;
