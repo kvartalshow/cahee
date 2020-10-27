@@ -1,12 +1,16 @@
 .about{
     @include flex(center, center, row, nowrap);
+<<<<<<< HEAD
     @include size(100%, auto);
     min-height: 700px;
+=======
+>>>>>>> 592b40de05aaf2ba7eb56b5ab64aa9e14acd6b4a
     padding: 36px 0px 10px;
     padding-left: 11%;
     padding-right: 11%;
     background-color: $turquoise;
     &__img{
+<<<<<<< HEAD
         width: 50%;
         margin-right: 90px;
         @include padding-hack(48%);
@@ -20,5 +24,13 @@
             @include text($h17, 300, $white, $f-raleway);
             line-height: 27px;
         }
+=======
+        @include size(100%,100%);
+    }
+    &__text{
+        &-title{
+            @include text($h90, 700, $white, $f-raleway);
+        }
+>>>>>>> 592b40de05aaf2ba7eb56b5ab64aa9e14acd6b4a
     }
 }
