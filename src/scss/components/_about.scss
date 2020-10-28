@@ -2,6 +2,9 @@
     @include flex(space-between, center, row, nowrap);
     @include size(100%, auto);
     min-height: 700px;
+    @include flex(center, center, row, nowrap);
+    @include size(100%, auto);
+    min-height: 700px;
     padding: 36px 0px 10px;
     padding-left: 11%;
     padding-right: 11%;
@@ -19,6 +22,12 @@
         &-subtitle{
             @include text($h17, 300, $white, $f-raleway);
             line-height: 27px;
+        }
+        @include size(100%,100%);
+    }
+    &__text{
+        &-title{
+            @include text($h90, 700, $white, $f-raleway);
         }
     }
 }
