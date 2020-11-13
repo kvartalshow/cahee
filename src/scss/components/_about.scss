@@ -1,33 +1,43 @@
 .about{
-    @include flex(space-between, center, row, nowrap);
-    @include size(100%, auto);
-    min-height: 700px;
-    @include flex(center, center, row, nowrap);
     @include size(100%, auto);
     min-height: 700px;
     padding: 36px 0px 10px;
     padding-left: 11%;
     padding-right: 11%;
     background-color: $turquoise;
+    &__inner{
+        @include flex(center, center, row, nowrap);
+        max-width: 1500px;
+        margin: 0 auto;
+        @include media-d-m($screen-desktop){
+            @include flex(center, center, column, wrap);
+            padding: 100px 3%;
+            text-align: center;
+        }
+    }
     &__img{
         width: 50%;
         margin-right: 90px;
         @include padding-hack(48%);
+        @include media-d-m($screen-desktop){
+            margin-right: 0px;
+        }
     }
     &__text{
-        @include size(500px, auto);
-        &-title{
-            @include text($h90, 700, $white, $f-raleway);
-        }
-        &-subtitle{
-            @include text($h17, 300, $white, $f-raleway);
-            line-height: 27px;
-        }
-        @include size(100%,100%);
+        max-width: 500px;
     }
-    &__text{
-        &-title{
-            @include text($h90, 700, $white, $f-raleway);
-        }
+    &__text-title{
+        @include text($h90, 700, $white, $f-raleway);
+        @include media-d-m($screen-tablet-small){
+            font-size: $h60;
+            margin-bottom: 34px;
+          }
+    }
+    &__text-subtitle{
+        @include text($h17, 300, $white, $f-raleway);
+        line-height: 27px;
+    }
+    &__text-path:first-of-type{
+        margin-bottom: 10px;
     }
 }

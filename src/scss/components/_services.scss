@@ -1,0 +1,40 @@
+.services {
+  background-color: $blue;
+  &__wrapper {
+    @include flex(center, center, row, wrap);
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 150px 165px;
+    @include media-d-m($screen-desktop-large) {
+      @include flex(center, center, column-reverse, wrap);
+      padding: 150px 11%;
+    }
+  }
+  &__banner {
+    position: relative;
+  }
+  &__title {
+    @include flex(center, center, row, wrap);
+    @include text($h60, 700, $white, $f-raleway);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &__images {
+    width: 400px;
+    @include padding-hack(114%);
+    @include media-d-m($screen-desktop-large) {
+      margin-bottom: 30px;
+    }
+    @include media-d-m($screen-tablet-small){
+      width: 250px;
+    }
+    @include media-d-m($screen-iphone-plus){
+      width: 200px;
+    }
+  }
+}

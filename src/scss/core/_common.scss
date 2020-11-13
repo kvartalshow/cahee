@@ -11,10 +11,8 @@ input,
 button,
 textarea,
 select {
-  font-family: sans-serif;
-  background-color: $white;
+  border: none;
 }
-
 ul {
   list-style: none;
 }
@@ -26,3 +24,8 @@ a, button {
   display: inline-flex;
   text-decoration: none;
 }
+.input{
+  outline: none;
+  border: none;
+}
+
