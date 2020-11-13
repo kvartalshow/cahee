@@ -21,8 +21,13 @@ $button-color: $coral;
             padding: 0 11%;
         }
     }
+    &__button-wrapper{
+        width: 100%;
+        padding: 0 11%;
+    }
     &__button{
         background-color: $coral;
+        margin: 0 auto;
         &:active{
             background-color: darken($color: $coral, $amount: 5%);
           }

@@ -27,5 +27,8 @@ a, button {
 .input{
   outline: none;
   border: none;
+  @include media-d-m($screen-tablet-small){
+    width: 100%;
+  }
 }
 

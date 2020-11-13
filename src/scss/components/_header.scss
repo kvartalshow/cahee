@@ -2,8 +2,8 @@
   @include bg-image("../assets/images/header-img.png", cover);
   @include flex(space-between, flex-start, column, nowrap);
   @include size(100%, 100vh);
+  min-height: 568px;
   background-position: 50% 50%;
-  min-height: 1000px;
   &__menu {
     @include flex(space-between, flex-start, row, nowrap);
     @include size(100%, auto);
@@ -50,6 +50,7 @@
   }
   &__block-button {
     background-color: $orange;
+    margin-bottom: 5px;
     &:active {
       background-color: darken($color: $orange, $amount: 5%);
     }
@@ -87,9 +88,9 @@
     animation-timing-function: ease;
     animation-name: bounce-1;
     @keyframes bounce-1 {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0%   { transform: translateY(5px); }
+      50%  { transform: translateY(-5px); }
+      100% { transform: translateY(5px); }
     }
     &:active {
       padding-bottom: 0px;
@@ -97,6 +98,9 @@
     &:hover .header__scroll-block:before {
       top: 6px;
       height: 10px;
+    }
+    @include media-d-m($screen-iphone-plus){
+      margin-bottom: 20px;
     }
   }
   &__scroll-block {
