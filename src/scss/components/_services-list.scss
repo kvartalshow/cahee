@@ -5,6 +5,7 @@
   }
   &__item {
     @include flex(center, center, row, nowrap);
+    max-width: 400px;
     height: auto;
     margin-bottom: 20px;
     background-color: $white;
@@ -12,29 +13,24 @@
   &__title {
     @include flex(center, center, row, wrap);
     @include text($h20, 700, $fonts-color, $f-raleway);
-    @include size(299px, 100px);
+    @include size(70%, 100px);
     border-right: 1px solid $light-black;
     text-align: center;
-    @include media-d-m($screen-tablet-small){
-      @include size(199px, 70px);
-    }
     @include media-d-m($screen-iphone-plus){
-      @include size(150px, 70px);
       font-size: $h15;
+      height: 75px;
     }
   }
   &__svg {
     @include flex(center, center, row, wrap);
     font-size: 44px;
-    @include size(100px, 100px);
+    @include size(30%, 100px);
     @include media-d-m($screen-tablet-small){
-      @include size(52.5px, 70px);
       font-size: 32px;
     }
     @include media-d-m($screen-iphone-plus){
-      
+      height: 75px;
     }
-    
   }
 }
 .services-list-card {
